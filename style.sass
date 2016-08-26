@@ -1,0 +1,70 @@
+*,
+*:before,
+*:after
+  box-sizing: border-box
+
+html
+  height: 100%
+
+body
+  height: 100%
+  text-align: center
+  font-size: 0
+  margin: 0
+  padding: 15px
+  background-position: center
+  background-size: cover
+  &:before
+    content: ""
+    height: 100%
+    display: inline-block
+    vertical-align: middle
+  &.morning
+    background-image: url('morning.jpg')
+  &.afternoon
+    background-image: url('afternoon.jpg')
+  &.evening
+    background-image: url('evening.jpg')
+
+#main
+  display: inline-block
+  vertical-align: middle
+  text-align: left
+  font-size: 18px
+  padding: 15px
+  max-width: 700px
+  width: 100%
+  background-color: rgba(#34495e, 0.95)
+  border: 6px solid #2c3e50
+  box-shadow: 1px 3px 6px rgba(black, 0.8)
+  color: #ecf0f1
+  transform: translateY(50px) scale(0.9)
+  opacity: 0
+  text-align: center
+  .loaded &
+    transition: 0.6s ease-out
+    transform: none
+    opacity: 1
+  &.flip
+    transition: 0.8s ease-in-out
+    transform: rotate(540deg)
+    box-shadow: -1px -3px 6px rgba(black, 0.8)
+
+h1
+  margin-top: 0
+
+hr
+  background-color: #16a085
+  height: 6px
+  border: none
+  margin: 1.5em auto
+  max-width: 300px
+
+blockquote
+  margin: 15px auto
+  p
+    font-weight: bold
+    margin: 1em 0 0.5em
+  cite
+    &:before
+      content: "– "

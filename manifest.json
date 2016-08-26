@@ -1,0 +1,9 @@
+{
+  "manifest_version": 2,
+  "name": "New New Tab Page",
+  "description": "This extension overrides Chrome's default new tab page.",
+  "version": "1.0",
+  "chrome_url_overrides" : {
+    "newtab": "newtab.html"
+  }
+}
